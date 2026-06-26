@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Tareas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Tareas" />
+  <meta name="theme-color" content="#6c63ff" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mis Tareas</h1>
+      <p class="date" id="date"></p>
+    </header>
+
+    <div class="stats">
+      <span id="stats-text">0 tareas pendientes</span>
+      <button class="clear-btn" onclick="clearCompleted()">Limpiar completadas</button>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="new-task" placeholder="Nueva tarea..." onkeydown="if(event.key==='Enter') addTask()" />
+      <button onclick="addTask()">+</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', this)">Todas</button>
+      <button class="filter-btn" onclick="setFilter('pending', this)">Pendientes</button>
+      <button class="filter-btn" onclick="setFilter('done', this)">Completadas</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <p class="empty" id="empty-msg">No hay tareas. ¡Agrega una arriba!</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
