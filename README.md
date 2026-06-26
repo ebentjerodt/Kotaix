@@ -2,11 +2,11 @@
 
 A minimalist image organizer for personal collections.
 
-## Feautres
+## Features
 
 - Automatically rename images using their creation date
 - Organize files into folders by month and year
-- Suport for JPG, PNG, and WEBP formats
+- Support for JPG, PNG, and WEBP formats
 - Preview thumbnails in the terminal
 
 ## Usage
@@ -15,11 +15,11 @@ A minimalist image organizer for personal collections.
 python kotaix.py --input ./photos --output ./organized
 ```
 
-## Requirments
+## Requirements
 
 - Python 3.9+
 - Pillow library
 
 ## Contributing
 
-Pull requests are wellcome! Please open an issue first to discuss what you would like to change.
+Pull requests are welcome! Please open an issue first to discuss what you would like to change.
