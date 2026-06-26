@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Link de WhatsApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="logo">💬</div>
+    <h1>Generador de Link WhatsApp</h1>
+    <p class="subtitle">Crea un link directo para que tus clientes te escriban al instante</p>
+
+    <div class="form">
+      <label for="phone">Número de teléfono</label>
+      <div class="phone-row">
+        <select id="country">
+          <option value="54">🇦🇷 +54</option>
+          <option value="56">🇨🇱 +56</option>
+          <option value="57">🇨🇴 +57</option>
+          <option value="52">🇲🇽 +52</option>
+          <option value="51">🇵🇪 +51</option>
+          <option value="598">🇺🇾 +598</option>
+          <option value="34">🇪🇸 +34</option>
+          <option value="1">🇺🇸 +1</option>
+        </select>
+        <input type="tel" id="phone" placeholder="912345678" />
+      </div>
+
+      <label for="message">Mensaje predeterminado <span class="optional">(opcional)</span></label>
+      <textarea id="message" rows="3" placeholder="Hola, me interesa tu producto..."></textarea>
+
+      <button onclick="generate()">Generar link</button>
+    </div>
+
+    <div class="result" id="result" style="display:none">
+      <p class="result-label">Tu link:</p>
+      <div class="link-box">
+        <span id="generated-link"></span>
+        <button class="copy-btn" onclick="copyLink()">Copiar</button>
+      </div>
+      <a id="test-link" href="#" target="_blank" class="test-btn">Probar en WhatsApp →</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
