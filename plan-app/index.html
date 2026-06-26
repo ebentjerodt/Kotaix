@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Plan Diario</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Mi Plan" />
+  <meta name="theme-color" content="#1a1a2e" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="header-top">
+        <div>
+          <p class="greeting" id="greeting"></p>
+          <h1 id="day-name"></h1>
+        </div>
+        <div class="streak">🔥 <span id="streak">0</span> días</div>
+      </div>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('training', this)">💪 Entreno</button>
+        <button class="tab" onclick="showTab('nutrition', this)">🥗 Nutrición</button>
+        <button class="tab" onclick="showTab('supplements', this)">💊 Suplementos</button>
+        <button class="tab" onclick="showTab('habits', this)">✅ Hábitos</button>
+      </div>
+    </header>
+
+    <!-- ENTRENAMIENTO -->
+    <section id="tab-training" class="tab-content active">
+      <div id="training-content"></div>
+    </section>
+
+    <!-- NUTRICIÓN -->
+    <section id="tab-nutrition" class="tab-content">
+      <div id="nutrition-content"></div>
+    </section>
+
+    <!-- SUPLEMENTOS -->
+    <section id="tab-supplements" class="tab-content">
+      <div id="supplements-content"></div>
+    </section>
+
+    <!-- HÁBITOS -->
+    <section id="tab-habits" class="tab-content">
+      <div id="habits-content"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
